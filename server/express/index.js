@@ -13,9 +13,10 @@ app.all("/*", function(req, res, next){
 });
 
 app.post('/ping', function (req, res) {
+  req.body.text = `${req.body.text} from Nodejs`;
   res.send(req.body)
 })
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('Nodejs app listening on port 3000')
 })

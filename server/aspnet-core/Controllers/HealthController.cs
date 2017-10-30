@@ -11,8 +11,9 @@ namespace aspnet_core.Controllers
     public class HealthController : Controller
     {
         [HttpPost]
-        public Object Post([FromBody]Object value)
+        public dynamic Post([FromBody]dynamic value)
         {
+            value.text = $"{value.text} .net core";
             return value;
         }
     }
