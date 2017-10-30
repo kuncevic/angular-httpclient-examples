@@ -13,7 +13,7 @@ namespace aspnet_core.Controllers
         [HttpPost]
         public dynamic Post([FromBody]dynamic value)
         {
-            value.text = $"{value.text} .net core";
+            value.text = $"{value.text} from .NET Core";
             return value;
         }
     }
