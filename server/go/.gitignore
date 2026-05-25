@@ -1,0 +1,14 @@
+# Binaries
+go-server
+*.exe
+
+# Build output
+/dist/
+
+# Module cache
+vendor/
+
+# Test output
+*.test
+*.out
+coverage.txt
