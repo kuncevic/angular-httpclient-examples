@@ -1,7 +1,14 @@
-<button (click)="callServer(3000)">Post to nodejs server</button>
-<button (click)="callServer(3001)">Post to .net core server</button>
+<div class="container">
+  <div class="buttons">
+    <button class="btn btn-node" (click)="callServer(3000)">Post to Node.js</button>
+    <button class="btn btn-dotnet" (click)="callServer(3001)">Post to .NET</button>
+    <button class="btn btn-go" (click)="callServer(3002)">Post to Go</button>
+  </div>
 
-@if (response()) {
-  <p>Response: {{ response() | json }}</p>
-}
-
+  <div class="response">
+    @if (response()) {
+      <span class="label">Response</span>
+      <pre>{{ response() | json }}</pre>
+    }
+  </div>
+</div>
